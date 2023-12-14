@@ -14,7 +14,7 @@ jobs:
           distribution: 'temurin'
           java-version: '11'
       - name: Build with Maven
-        run: 
+        run: |
           mvn package
           ls -l
           
