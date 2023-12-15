@@ -1,4 +1,4 @@
-    # Workflow to deploy the artifacts
+# Workflow to deploy the artifacts
 name: cd
 on:
   workflow_run:
@@ -15,5 +15,6 @@ jobs:
        
        - name: Deployment using kubernetes
          run: |
+           kubectl delete deployment brent-deployment
            kubectl apply -f deployment.yml
            kubectl get deployments
